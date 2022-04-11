@@ -3,8 +3,6 @@ from core.selector.TaskSelector import TaskSelector
 from core.selector.Resource import Resource
 from core.selector.Task import Task
 
-
-# Create your tests here.
 class TaskSelectorTest(TestCase):
 
     def test_select_empty_list(self):
@@ -16,8 +14,8 @@ class TaskSelectorTest(TestCase):
         self.assertEqual(TaskSelector.select([task1, task2]), [task1, task2])
         
     def test_resource_overpal(self):
-        self.assertTrue(TaskSelector.resourcesOverlap([Resource('resource1')], [Resource('resource1')]))
-        self.assertFalse(TaskSelector.resourcesOverlap([Resource('resource1')], [Resource('resource2')]))
+        self.assertTrue(TaskSelector.resources_overlap([Resource('resource1')], [Resource('resource1')]))
+        self.assertFalse(TaskSelector.resources_overlap([Resource('resource1')], [Resource('resource2')]))
 
     def test_select_overlapping_tasks(self):
         task1 = Task('task1', [Resource('resource1')], 12)

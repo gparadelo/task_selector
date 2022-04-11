@@ -6,3 +6,10 @@ class Task:
 
     def __repr__(self):
         return f'Task({self.name}, {self.resources}, {self.profit})'
+
+    def __eq__(self, other):
+        return (isinstance(other, self.__class__) 
+            and self.name == other.name
+            and self.profit == other.profit
+            and self.resources == other.resources
+        )
