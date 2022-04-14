@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from .forms import UploadFileForm
 
 def handle_uploaded_file(f):
-    with open('name.txt', 'wb') as destination:
+    with open('core/static/upload/data.json', 'wb') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
 

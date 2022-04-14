@@ -5,7 +5,7 @@ class Task:
         self.profit = profit
 
     def __repr__(self):
-        return f'Task({self.name}, {self.resources}, {self.profit})'
+        return f'Task(name={self.name}, resources={self.resources}, profit={self.profit})'
 
     def __eq__(self, other):
         return (isinstance(other, self.__class__) 

@@ -8,3 +8,6 @@ def as_task(dict):
 
 def parse_task(json_task):
     return json.loads(json_task, object_hook = as_task)
+
+def parse_task_list(json_task_list):
+    return json.loads(json_task_list, object_hook = as_task)
