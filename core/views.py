@@ -27,4 +27,5 @@ def get_tasks():
         return TaskSelector.select(task_list)
 
 def file_uploaded(request):
-    return render(request, 'core/file_uploaded.html', {'tasks': get_tasks()})
+    tasks = list(map(lambda task: task.name, get_tasks()))
+    return render(request, 'core/file_uploaded.html', {'tasks': tasks})

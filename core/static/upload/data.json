@@ -1,6 +1,6 @@
 [
-    {"name": "capture for client 1098", "resources": ["camera", "disk", "proc"] ,
-    "profit": 9.2},
-    {"name": "clean disk", "resources": ["disk"] , "profit": 0.4},
-    {"name": "upgrade to v2.1", "resources": ["proc"] , "profit": 2.9}
+{'name': 'capture for client 1099', 'resources': ['camera', 'disk', 'proc'] ,
+'profit': 9.2},
+{'name': 'clean disk', 'resources': ['disk'] , 'profit': 0.4},
+{'name': 'upgrade to v2.1', 'resources': ['proc'] , 'profit': 8.9}
 ]
