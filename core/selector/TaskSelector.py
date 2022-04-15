@@ -16,7 +16,7 @@ class TaskSelector:
         if TaskSelector.resources_overlap(used_resources, tasks[0].resources):
             return tasksNotIncludingHead
 
-        tasksIncludingHead = TaskSelector._select_recursive(tasks[1:], used_resources + tasks[0].resources) 
+        tasksIncludingHead = TaskSelector._select_recursive(tasks[1:], used_resources + list(tasks[0].resources)) 
         tasksIncludingHead = ([tasks[0]] + tasksIncludingHead[0],
          tasks[0].profit + tasksIncludingHead[1])
 
