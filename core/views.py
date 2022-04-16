@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import UploadFileForm
+from json import JSONDecodeError
 
 from core.selector.JsonParse import parse_task_list
 from core.selector.TaskSelector import TaskSelector
@@ -27,5 +28,8 @@ def get_tasks():
         return TaskSelector.select(task_list)
 
 def file_uploaded(request):
-    tasks = list(map(lambda task: task.name, get_tasks()))
+    try:
+        tasks = list(map(lambda task: task.name, get_tasks()))
+    except (KeyError, TypeError,  JSONDecodeError):
+        return render(request, 'core/input_error.html')
     return render(request, 'core/file_uploaded.html', {'tasks': tasks})
