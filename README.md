@@ -28,3 +28,13 @@ The input must be uploaded as a file with the following format:
         - Store each iteration's subproblem in matrix or hash table indexed by [n],[resources consumed] where n is the index of the last task considered. 
         - When extending a subproblem with a new task, compare the resulting subproblem with previous ones encountered that consumed the same resources and considered the same tasks. If one exists with higher profit, the subproblem can be discarded and not extended any further to save time.
 4. Consider Security
+5. Type hints
+
+### Code
+The bulk of the application is inside of the 'core' app. Inside this directory, the highlits of the project are as follows:
+- **selector/** contains the core logic for parsing the input and the algorithm to find the solution. 
+- **tests/** contains all the unit tests for this main code.
+- **templates/** contains the templates for both the upload file view and the show result view.
+- **views.py** contains the logic for showing each of the views and handling user uploaded content.
+
+The rest is mostly boilerplate django/docker files.
