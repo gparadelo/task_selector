@@ -27,3 +27,4 @@ The input must be uploaded as a file with the following format:
         - Make the algorithm iterative. 
         - Store each iteration's subproblem in matrix or hash table indexed by [n],[resources consumed] where n is the index of the last task considered. 
         - When extending a subproblem with a new task, compare the resulting subproblem with previous ones encountered that consumed the same resources and considered the same tasks. If one exists with higher profit, the subproblem can be discarded and not extended any further to save time.
+4. Consider Security
